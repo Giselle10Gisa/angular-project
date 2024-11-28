@@ -22,3 +22,8 @@
     padding: 0.5em;
     cursor: pointer;
 }
+
+.clear {
+    padding-left: 3px;
+    padding-right: 3px;
+}
