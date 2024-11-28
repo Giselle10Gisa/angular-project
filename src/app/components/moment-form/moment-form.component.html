@@ -1,21 +1,21 @@
 <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
     <input type="hidden" formControlName="id"/>
     <div class="flex flex-col mb-[1em]">
-        <label for="title" class="font-bold text-[0.9em] mb-[0.4em]">Título:</label>
-        <input type="text" placeholder="Adicione um título" formControlName="title" required class="p-[0.6em] text-[#777] text-[0.8em]">
+        <label for="title" class="font-bold text-[0.9em] mb-[0.4em] dark:text-white">Título:</label>
+        <input type="text" placeholder="Adicione um título" formControlName="title" required class="p-[0.6em] text-[#777] dark:text-black text-[0.8em]">
         <div *ngIf="title.invalid && formDir.submitted">
-            <p *ngIf="title.errors?.['required']">O título é obrigatório</p>
+            <p *ngIf="title.errors?.['required']" class="text-[#dc3545]">O título é obrigatório</p>
         </div>
     </div>
     <div class="flex flex-col mb-[1em]">
-        <label for="description" class="font-bold text-[0.9em] mb-[0.4em]">Descrição:</label>
-        <textarea required placeholder="O que aconteceu lá?" formControlName="description" class="p-[0.6em] text-[#777] text-[0.8em]"></textarea>
+        <label for="description" class="font-bold text-[0.9em] mb-[0.4em] dark:text-white">Descrição:</label>
+        <textarea required placeholder="O que aconteceu lá?" formControlName="description" class="p-[0.6em] text-[#777] dark:text-black text-[0.8em]"></textarea>
         <div *ngIf="description.invalid && formDir.submitted">
-            <p *ngIf="description.errors?.['required']">A descrição é obrigatório</p>
+            <p *ngIf="description.errors?.['required']" class="text-[#dc3545]">A descrição é obrigatório</p>
         </div>
     </div>
     <div class="flex flex-col mb-[1em]">
-        <label for="image" class="font-bold text-[0.9em] mb-[0.4em]">Adicione a foto mais marcante:</label>
+        <label for="image" class="font-bold text-[0.9em] mb-[0.4em] dark:text-white">Adicione a foto mais marcante:</label>
         <input type="file" (change)="onFileSelected($event)" class="p-[0.6em] text-[#777] text-[0.8em]">
     </div>
     <input type="submit" value="{{ btnText }}"/>

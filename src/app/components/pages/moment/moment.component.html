@@ -1,12 +1,12 @@
 <div class="flex flex-col justify-center items-center text-center w-[60%] my-0 mx-auto" *ngIf="moment">
-    <h1 class="mb-[1em]">{{ moment.title }}</h1>
-    <img src="{{ baseApiUrl }}uploads/{{ moment.image }}" alt="{{ moment.title }}" class="max-w-[500px] mb-4 mx-auto">
-    <div class="border-b-[1px] border-solid border-[#ccc] p-[1.2em] w-full">
-        <h3 class="mb-[1em]">Sobre este momento:</h3>
-        <p>{{ moment.description }}</p>
+    <h1 class="mb-[1em] dark:text-white">{{ moment.title }}</h1>
+    <img src="{{ baseApiUrl }}uploads/{{ moment.image }}" alt="{{ moment.title }}" class="max-w-[500px] mb-4 mx-auto dark:border-[2px] dark:border-solid dark:border-[#dec129]">
+    <div class="border-b-[1px] border-solid border-[#ccc] dark:border-[#dec129] p-[1.2em] w-full">
+        <h3 class="mb-[1em] dark:text-white">Sobre este momento:</h3>
+        <p class="dark:text-white">{{ moment.description }}</p>
     </div>
-    <div class="border-b-[1px] border-solid border-[#ccc] p-[1.2em] w-full bg-[#eee]">
-        <h3 class="mb-[1em]">Ações:</h3>
+    <div class="border-b-[1px] border-solid border-[#ccc] dark:border-[#dec129] p-[1.2em] w-full bg-[#eee] dark:bg-gray-800">
+        <h3 class="mb-[1em] dark:text-white">Ações:</h3>
         <a routerLink="/moments/edit/{{moment.id}}" class="edit-btn">
             <i class="pi pi-pen-to-square"></i> Editar
         </a>
@@ -15,30 +15,30 @@
         </button>
     </div>
     <div class="mb-[1em] py-[1.5em] px-0 w-full">
-        <h3 class="mb-[1em]">Comentários ({{ moment.comments!.length > 0 ? moment.comments!.length : 0 }}):</h3>
+        <h3 class="mb-[1em] dark:text-white">Comentários ({{ moment.comments!.length > 0 ? moment.comments!.length : 0 }}):</h3>
         <div *ngIf="moment.comments!.length > 0; else noComments">
-            <div class="text-left border-b-[1px] border-solid border-[#efefef] py-[1em] px-0" *ngFor="let comment of moment.comments">
-                <p class="text-[0.9em]">{{ comment.text }}</p>
-                <p class="text-[0.8em]"><span class="font-bold">por:</span>{{ comment.username }}</p>
+            <div class="text-left border-b-[1px] border-solid border-[#efefef] dark:border-[#dec129] py-[1em] px-0" *ngFor="let comment of moment.comments">
+                <p class="text-[0.9em] dark:text-white">{{ comment.text }}</p>
+                <p class="text-[0.8em] dark:text-white"><span class="font-bold dark:text-white">por:</span>{{ comment.username }}</p>
             </div>
         </div>
         <ng-template #noComments>
-            <p>Não há comentários</p>
+            <p class="dark:text-white">Não há comentários</p>
         </ng-template>
     </div>
     <div class="mb-[3em]">
-        <h3>Deixe um comentário:</h3>
+        <h3 class="dark:text-white">Deixe um comentário:</h3>
         <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)" class="mt-[1em] text-left max-w-[300px] ml-0">
             <div class="flex flex-col mb-[1em]">
-                <label for="text" class="font-bold text-[0.9em] mb-[0.4em]">Comentário:</label>
-                <textarea formControlName="text" placeholder="O que você quer comentar?" required class="p-[0.6em] text-[#777] text-[0.8em]"></textarea>
+                <label for="text" class="font-bold text-[0.9em] mb-[0.4em] dark:text-white">Comentário:</label>
+                <textarea formControlName="text" placeholder="O que você quer comentar?" required class="p-[0.6em] text-[#777] text-[0.8em] dark:text-black"></textarea>
                 <div *ngIf="text.invalid && formDir.submitted">
                     <p *ngIf="text.errors?.['required']" class="text-[#dc3545] mt-[0.4em] border-l-[3px] border-solid border-[#dc3545] pl-[0.2em]">O texto é obrigatório.</p>
                 </div>
             </div>
             <div class="flex flex-col mb-[1em]">
-                <label for="username" class="font-bold text-[0.9em] mb-[0.4em]">Nome:</label>
-                <input formControlName="username" type="text" placeholder="Digite o seu nome" required class="p-[0.6em] text-[#777] text-[0.8em]"/>
+                <label for="username" class="font-bold text-[0.9em] mb-[0.4em] dark:text-white">Nome:</label>
+                <input formControlName="username" type="text" placeholder="Digite o seu nome" required class="p-[0.6em] text-[#777] text-[0.8em] dark:text-black"/>
                 <div *ngIf="username.invalid && formDir.submitted">
                     <p *ngIf="username.errors?.['required']" class="text-[#dc3545] mt-[0.4em] border-l-[3px] border-solid border-[#dc3545] pl-[0.2em]">O nome é obrigatório.</p>
                 </div>

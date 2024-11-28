@@ -1,9 +1,9 @@
-<div class="fixed top-[3em] w-[50%] ml-[50%] left-[-25%] z-[10] bg-white border-[3px] border-solid border-[#dec129] p-[1.5em] flex flex-col" *ngIf="messagesService.message">
+<div class="fixed top-[3em] w-[50%] ml-[50%] left-[-25%] z-[10] bg-white border-[3px] border-solid border-[#dec129] p-[1.5em] flex flex-col dark:bg-gray-800" *ngIf="messagesService.message">
     <div class="flex justify-between mb-[1em]">
-        <h2>Mensagem do Sistema:</h2>
+        <h2 class="dark:text-white">Mensagem do Sistema:</h2>
         <button class="p-[0.5em] cursor-pointer" (click)="messagesService.clear()">
-            <i class="pi pi-times"></i>
+            <i class="pi pi-times" style="color: white;"></i>
         </button>
     </div>
-    <p>{{ messagesService.message }}</p>
+    <p class="dark:text-white">{{ messagesService.message }}</p>
 </div>
