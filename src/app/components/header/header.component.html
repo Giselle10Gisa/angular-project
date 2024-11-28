@@ -1,11 +1,11 @@
-<nav>
-    <a href="/" class="brand">
-        <img src="/assets/logo.svg" alt="">
-        <h2>Moments</h2>
+<nav class="flex justify-between p-[1em] border-b-[1px] border-solid border-[#777]">
+    <a href="/" class="flex justify-center items-center no-underline">
+        <img src="/assets/logo.svg" alt="Logo" class="w-10 mr-[0.6em]">
+        <h2 class="transition-[0.4s] hover:text-[#dec129] text-lg">Moments</h2>
     </a>
-    <ul class="links">
-        <li><a [routerLink]="['/']">Home</a></li>
-        <li id="add"><a [routerLink]="['/moments/new']">Compartilhar</a></li>
-        <li><a [routerLink]="['/about']">About</a></li>
+    <ul class="flex justify-center items-center no-underline">
+        <li class="mr-[1em] list-none"><a [routerLink]="['/']" class="py-[0.1em] px-[0.3em] no-underline">Home</a></li>
+        <li class="mr-[1em] list-none hover:bg-[#efefef] rounded-sm"><a [routerLink]="['/moments/new']" class="py-[0.1em] px-[0.3em] no-underline text-[#dec129]">Compartilhar</a></li>
+        <li class="mr-[1em] list-none"><a [routerLink]="['/about']" class="py-[0.1em] px-[0.3em] no-underline">About</a></li>
     </ul>
 </nav>

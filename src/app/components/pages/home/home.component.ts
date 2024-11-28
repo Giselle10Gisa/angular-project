@@ -9,8 +9,7 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
   selector: 'app-home',
   standalone: true,
   imports: [NgFor, NgIf, RouterModule, RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './home.component.html'
 })
 export class HomeComponent {
   allMoments: Moment[] = [];

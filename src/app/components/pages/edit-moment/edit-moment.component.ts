@@ -10,8 +10,7 @@ import { MessagesService } from '../../../services/messages.service';
   selector: 'app-edit-moment',
   standalone: true,
   imports: [MomentFormComponent, NgIf],
-  templateUrl: './edit-moment.component.html',
-  styleUrl: './edit-moment.component.css'
+  templateUrl: './edit-moment.component.html'
 })
 export class EditMomentComponent {
   moment!: Moment;

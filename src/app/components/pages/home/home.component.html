@@ -1,24 +1,25 @@
-<div class="home-container">
-    <h1>Veja o que estão compartilhando</h1>
-    <div class="search-container">
-        <form>
-            <i class="pi pi-search"></i>
+<div class="flex items-center justify-center flex-col">
+    <h1 class="mb-[0.5em]">Veja o que estão compartilhando</h1>
+    <div class="mb-[2em] w-full">
+        <form class="w-[30%] relative">
+            <i class="pi pi-search absolute top-2 left-2"></i>
             <input 
                 type="text" 
                 placeholder="Ou busque por um momento..." 
                 (input)="search($event)"
+                class="p-[0.5em] w-full text-center"
             >
         </form>
     </div>
     <div *ngIf="moments.length > 0; else noMoments">
-        <div class="moments-container">
-            <div class="moment" *ngFor="let moment of moments">
-                <img src="{{ baseApiUrl }}uploads/{{ moment.image }}" alt="{{ moment.title }}">
-                <h3>{{ moment.title }}</h3>
-                <p class="date">Em: {{ moment.created_at }}</p>
-                <p>Comentários: {{ moment.comments!.length }}</p>
-                <p>
-                    <a routerLink="moments/{{moment.id}}">Detalhes</a>
+        <div class="flex flex-wrap max-w-[80%] my-0 mx-auto justify-between">
+            <div class="w-[32%] mb-[1em] text-center" *ngFor="let moment of moments">
+                <img src="{{ baseApiUrl }}uploads/{{ moment.image }}" alt="{{ moment.title }}" class="w-full mb-[1em]">
+                <h3 class="mb-[1em]">{{ moment.title }}</h3>
+                <p class="text-[0.7em] italic mb-[1em]">Em: {{ moment.created_at }}</p>
+                <p class="mb-[1em]">Comentários: {{ moment.comments!.length }}</p>
+                <p class="mb-[1em]">
+                    <a routerLink="moments/{{moment.id}}" class="text-[#dec129] py-[0.3em] px-[0.6em] hover:bg-[#efefef]">Detalhes</a>
                 </p>
             </div>
         </div>

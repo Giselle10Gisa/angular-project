@@ -1,7 +1,7 @@
-<div class="message" *ngIf="messagesService.message">
-    <div class="message-header">
+<div class="fixed top-[3em] w-[50%] ml-[50%] left-[-25%] z-[10] bg-white border-[3px] border-solid border-[#dec129] p-[1.5em] flex flex-col" *ngIf="messagesService.message">
+    <div class="flex justify-between mb-[1em]">
         <h2>Mensagem do Sistema:</h2>
-        <button class="clear" (click)="messagesService.clear()">
+        <button class="p-[0.5em] cursor-pointer" (click)="messagesService.clear()">
             <i class="pi pi-times"></i>
         </button>
     </div>

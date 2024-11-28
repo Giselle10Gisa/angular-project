@@ -13,8 +13,7 @@ import { CommentService } from '../../../services/comment.service';
   selector: 'app-moment',
   standalone: true,
   imports: [NgIf, NgFor, FormsModule, ReactiveFormsModule, RouterModule, RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
-  templateUrl: './moment.component.html',
-  styleUrl: './moment.component.css'
+  templateUrl: './moment.component.html'
 })
 export class MomentComponent {
   moment?: Moment;

@@ -7,8 +7,7 @@ import { Moment } from '../../Moment';
   selector: 'app-moment-form',
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, NgIf],
-  templateUrl: './moment-form.component.html',
-  styleUrl: './moment-form.component.css'
+  templateUrl: './moment-form.component.html'
 })
 export class MomentFormComponent {
   @Output() onSubmit = new EventEmitter<Moment>()

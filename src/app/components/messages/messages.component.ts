@@ -6,8 +6,7 @@ import { NgIf } from '@angular/common';
   selector: 'app-messages',
   standalone: true,
   imports: [NgIf],
-  templateUrl: './messages.component.html',
-  styleUrl: './messages.component.css'
+  templateUrl: './messages.component.html'
 })
 export class MessagesComponent {
   constructor(public messagesService: MessagesService) {}

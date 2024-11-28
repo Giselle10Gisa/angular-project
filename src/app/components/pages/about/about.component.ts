@@ -6,8 +6,7 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
   selector: 'app-about',
   standalone: true,
   imports: [RouterModule, RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './about.component.html'
 })
 export class AboutComponent {
 

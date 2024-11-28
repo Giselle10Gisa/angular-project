@@ -8,8 +8,7 @@ import { MessagesComponent } from "./components/messages/messages.component";
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent, RouterLink, RouterLinkActive, MessagesComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'angular-project';

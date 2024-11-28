@@ -1,4 +1,7 @@
 @import "primeicons/primeicons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
     padding: 0;
@@ -25,24 +28,6 @@ form {
     margin: 0 auto;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-}
-
-.form-group label {
-    font-weight: bold;
-    font-size: 0.9em;
-    margin-bottom: .4em;
-}
-
-.form-group input, .form-group textarea {
-    padding: .6em;
-    color: #777;
-    font-size: 0.8em;
-}
-
 input[type="submit"] {
     background-color: #EFEFEF;
     border: 2px solid transparent;
@@ -57,13 +42,6 @@ input[type="submit"]:hover {
     color: #dec129;
     border-color: #dec129;
     background-color: transparent;
-}
-
-.validation-error p {
-    color: #dc3545;
-    margin-top: 0.4em;
-    border-left: 3px solid #dc3545;
-    padding-left: 0.2em;
 }
 
 /* BUTTONS */

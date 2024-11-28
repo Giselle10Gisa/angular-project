@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
   selector: 'app-new-moment',
   standalone: true,
   imports: [MomentFormComponent],
-  templateUrl: './new-moment.component.html',
-  styleUrl: './new-moment.component.css'
+  templateUrl: './new-moment.component.html'
 })
 export class NewMomentComponent {
   btnText = "Compartilhar!";
